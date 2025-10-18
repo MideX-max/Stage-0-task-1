@@ -1,16 +1,6 @@
-Here’s your updated **README** with a GitHub repository link and clear instructions to run the project locally:
-
----
-
 # 💾 Profile Card – Ogo Ayomide
 
 A retro-themed, responsive profile card built with HTML and CSS, featuring a CRT-style flicker effect, pixel font, and animated hover interactions. This project showcases a personal bio, avatar, social links, hobbies, and dislikes — all wrapped in a nostalgic aesthetic.
-
----
-
-## 🖼️ Preview
-
-*(Add a screenshot here once hosted or available)*
 
 ---
 
@@ -63,14 +53,14 @@ Test attributes are embedded for easy integration with automated testing tools:
 
 ### 🔗 GitHub Repository
 
-[https://github.com/MideX-max/profile-card](https://github.com/MideX-max/profile-card)
+https://github.com/MideX-max/Stage-0-task-1.git
 
 ### 🛠️ Run Locally
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/MideX-max/profile-card.git
-   cd profile-card
+   git clone https://github.com/MideX-max/Stage-0-task-1.git
+
    ```
 
 2. **Open the project**  

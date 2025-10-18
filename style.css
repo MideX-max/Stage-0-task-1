@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+:root {
+  --bg: #0a0a0a;
+  --card-bg: #111;
+  --text: #00ffea;
+  --accent: #ff00c8;
+  --secondary: #00e1ff;
+  --font: "VT323", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at center, #000 0%, #111 100%);
+  color: var(--text);
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02) 0,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.profile-card {
+  background: var(--card-bg);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  max-width: 600px;
+  box-shadow: 0 0 10px var(--accent), inset 0 0 10px var(--secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--accent), inset 0 0 15px var(--secondary);
+}
+
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+  transition: box-shadow 0.2s;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 20px var(--accent);
+}
+
+
+.profile-info h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
+}
+
+.profile-info p {
+  line-height: 1.5;
+  color: var(--text);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent);
+  transform: scale(1.2);
+  text-shadow: 0 0 5px var(--accent);
+  outline: none;
+}
+
+nav a:focus {
+  outline: 2px dashed var(--accent);
+  outline-offset: 4px;
+}
+
+section {
+  margin-top: 1rem;
+}
+
+.info-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-sections section {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--secondary);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ul {
+  list-style: square;
+  margin-left: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .profile-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  figure {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-info {
+    flex: 2;
+  }
+}
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.7;
+  }
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px var(--accent);
+  opacity: 0.7;
+  animation: flicker 2s infinite;
+  pointer-events: none;
+}
+

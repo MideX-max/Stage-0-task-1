@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card | Ogo Ayomide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <figure>
+      <img 
+        src="./Ogoayomide-BED3h_rx.jpg" 
+        alt="Avatar image of Ayomide" 
+        data-testid="test-user-avatar" 
+        class="avatar"
+      />
+    </figure>
+    <div class="profile-info">
+      <p>
+        Current time (ms):
+        <span data-testid="test-user-time" id="user-time"></span>
+      </p>
+      <header>
+        <h2 data-testid="test-user-name">Ogo Ayomide</h2>
+      </header>
+      <p data-testid="test-user-bio">
+        Creative mind who loves turning ideas into something smoother and smarter. Music, books, and late-night deep talks keep my energy grounded. Always chasing self-growth, good energy, and meaningful connections. Big believer in balance — code hard, vibe harder.
+      </p>
+      <nav data-testid="test-user-social-links" aria-label="Social links">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/http.mide1"
+               data-testid="test-user-social-instagram"
+               target="_blank"
+               rel="noopener noreferrer">
+               <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li> 
+            <a href="https://www.linkedin.com/in/bankole-ogoayomide-926168305/"
+               data-testid="test-user-social-linkedin"
+               target="_blank"
+               rel="noopener noreferrer">
+               <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/MideX-max"
+               data-testid="test-user-social-github"
+               target="_blank"
+               rel="noopener noreferrer">
+               <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+       <div class="info-sections">
+  <section>
+    <h2>Hobbies</h2>
+    <ul data-testid="test-user-hobbies">
+      <li>Reading novels</li>
+      <li>Listening to music</li>
+      <li>Playing games</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Dislikes</h2>
+    <ul data-testid="test-user-dislikes">
+      <li>Non-spicy food</li>
+      <li>Cold food</li>
+      <li>Wet socks</li>
+    </ul>
+  </section>
+</div>
+    </div>
+  </article>
+  <script src="script.js"></script>
+</body>
+</html>
