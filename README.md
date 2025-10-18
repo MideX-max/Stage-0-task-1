@@ -1,6 +1,22 @@
-# 💾 Profile Card – Ogo Ayomide
+# 💼 Profile Card – Ogo Ayomide
 
-A retro-themed, responsive profile card built with HTML and CSS, featuring a CRT-style flicker effect, pixel font, and animated hover interactions. This project showcases a personal bio, avatar, social links, hobbies, and dislikes — all wrapped in a nostalgic aesthetic.
+A sleek, responsive profile card built with HTML and CSS, featuring a warm rose-and-plum color palette, subtle shadows, and elegant hover effects. This project showcases a personal avatar, bio, social links, hobbies, and dislikes — all styled with a soft retro aesthetic.
+
+---
+
+## 🎨 Theme & Design
+
+- **Color Palette**:  
+  - Background: `#4D0011` (deep plum)  
+  - Card: `#C2858C` (rose pink)  
+  - Text: `#c7fff9` (soft cyan)  
+  - Accent: `#731164` (muted pink)  
+---
+
+- **Layout**:  
+  - Avatar and profile info side-by-side on wider screens  
+  - Hobbies and Dislikes displayed in a horizontal split  
+  - Social icons centered below the bio
 
 ---
 
@@ -8,17 +24,14 @@ A retro-themed, responsive profile card built with HTML and CSS, featuring a CRT
 
 ```
 ├── index.html       # Main HTML file
-├── style.css        # Styling with CRT theme and responsive layout
-├── script.js        # Optional JS for dynamic time display
-├── assets/          # Folder for avatar image and other media
+├── style.css        # Custom styling
+├── script.js        # Optional JS for dynamic time
+├── assets/          # Folder for avatar image and media
 ```
 
 ---
 
 ## 🎨 Features
-
-- **Retro CRT Design**: Flickering borders and scanline overlay for a vintage monitor vibe.
-- **Pixel Font**: Uses [VT323](https://fonts.google.com/specimen/VT323) for a terminal-style look.
 - **Responsive Layout**: Adapts to mobile screens with stacked sections.
 - **Hover Effects**: Glowing shadows and scale transitions on avatar and social icons.
 - **Side-by-Side Sections**: Hobbies and Dislikes are displayed in a horizontal layout on larger screens.
@@ -49,8 +62,6 @@ Test attributes are embedded for easy integration with automated testing tools:
 
 ---
 
-## 🚀 Getting Started
-
 ### 🔗 GitHub Repository
 
 https://github.com/MideX-max/Stage-0-task-1.git
@@ -59,27 +70,24 @@ https://github.com/MideX-max/Stage-0-task-1.git
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/MideX-max/Stage-0-task-1.git
-
+      git clone https://github.com/MideX-max/Stage-0-task-1.git
    ```
 
 2. **Open the project**  
-   You can open `index.html` directly in your browser:
-   - Double-click `index.html`, or
+   - Double-click `index.html`, or  
    - Use a local server (e.g., Live Server in VS Code)
 
 3. **Customize**  
-   - Replace the avatar image (`Ogoayomide-BED3h_rx.jpg`) with your own.
-   - Edit `index.html` and `style.css` to personalize content and styling.
+   - Replace the avatar image (`Ogoayomide-BED3h_rx.jpg`) with your own  
+   - Edit `index.html` and `style.css` to personalize content and styling
 
 ---
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- Font Awesome (for icons)
-- Google Fonts (VT323)
+- HTML5  
+- CSS3  
+- Font Awesome (icons)  
 
 ---
 
