@@ -58,7 +58,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
     alert("Network error. Check your connection and try again.");
   }
 
-  // Re-enable button
   submitBtn.disabled = false;
   submitBtn.textContent = "Send Message";
 });
