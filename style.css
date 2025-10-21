@@ -4,10 +4,9 @@
 :root {
   --bg: #4D0011;
   --card-bg: #C2858C;
-  --text: #c7fff9; /* Softer cyan */
-  --accent: #731164; /* Muted pink */
+  --text: #c7fff9; 
+  --accent: #731164; 
   --secondary: #4D0011; 
-  /* --font: "VT323", monospace; */
 }
 
 * {
@@ -23,7 +22,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: auto; 
+  padding: 1rem; 
 }
 
 .profile-card {
@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   padding: 2rem;
   gap: 1rem;
-  max-width: 700px;
+  max-width: 600px;
   box-shadow: 0 0 15px rgba(5, 0, 0, 0.168);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -65,32 +65,43 @@ body {
   color: var(--text);
 }
 
-.navv-buttons {
+.navv-buttons{
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-top: 11rem; 
-  flex-wrap: wrap; 
+  margin-top: 5rem;
 }
-
-.contact-button,
-.about-button {
+.contact-button {
   color: var(--text);
   border: 2px solid var(--secondary);
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
   text-decoration: none;
-  background: transparent;
 }
-
-.contact-button:hover,
-.about-button:hover {
+.contact-button:hover {
   background-color: var(--accent);
+  transform: scale(1.05);
   color: var(--text);
 }
-
+.about-button {
+  /* background-color: var(--secondary); */
+  color: var(--text);
+  border: 2px solid var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+.about-button:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+  color: var(--text);
+}
 nav {
   margin-top: 1.5rem;
   display: flex;
@@ -106,11 +117,13 @@ nav ul {
 nav a {
   color: var(--secondary);
   font-size: 1.6rem;
+  transition: color 0.2s, transform 0.2s;
 }
 
 nav a:hover,
 nav a:focus {
   color: var(--accent);
+  transform: scale(1.2);
   text-shadow: 0 0 5px var(--accent);
   outline: none;
 }
@@ -138,7 +151,6 @@ ul {
   margin-left: 1.5rem;
 }
 
-/* ========== DESKTOP LAYOUT ========== */
 @media (min-width: 700px) {
   .profile-card {
     flex-direction: row;
@@ -157,39 +169,12 @@ ul {
   }
 }
 
-/* ========== MOBILE LAYOUT ========== */
-@media (max-width: 700px) {
-  /* make profile-info a flex column container so we can reorder elements */
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* move the navv-buttons where icons were */
-  .navv-buttons {
-    order: 2;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-    gap: 0.8rem;
-  }
-
-  .contact-button,
-  .about-button {
-    width: 80%;
-    text-align: center;
-    padding: 0.8rem;
-    font-size: 1.1rem;
-  }
-
-  /* move icons below hobbies/dislikes */
-  nav {
-    order: 4;
-    margin-top: 1rem;
-  }
-
+@media (max-width: 699px) {
   .info-sections {
-    order: 3;
     flex-direction: column;
+  }
+
+  .navv-buttons {
+    margin-top: 2rem;
   }
 }
