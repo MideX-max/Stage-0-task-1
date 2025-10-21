@@ -159,13 +159,32 @@ ul {
 
 /* ========== MOBILE LAYOUT ========== */
 @media (max-width: 700px) {
-  /* make profile-info a flex column container so we can reorder elements */
+  .profile-card {
+    flex-direction: column;
+    align-items: center; /* centers everything including the image */
+    text-align: center; /* makes text align nice under image */
+  }
+
+  figure {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
   .profile-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  /* move the navv-buttons where icons were */
+  /* move navv-buttons where icons were */
   .navv-buttons {
     order: 2;
     flex-direction: column;
