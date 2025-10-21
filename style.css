@@ -4,9 +4,10 @@
 :root {
   --bg: #4D0011;
   --card-bg: #C2858C;
-  --text: #c7fff9; 
-  --accent: #731164; 
+  --text: #c7fff9; /* Softer cyan */
+  --accent: #731164; /* Muted pink */
   --secondary: #4D0011; 
+  /* --font: "VT323", monospace; */
 }
 
 * {
@@ -16,6 +17,8 @@
 }
 
 body {
+  /* background: radial-gradient(circle at center, #4D0011 0%, #4D0011 100%); */
+  color: var(--text);
   font-family: var(--font);
   display: flex;
   justify-content: center;
