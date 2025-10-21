@@ -8,7 +8,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const message = form.message.value.trim();
   const success = document.getElementById("success-message");
 
-  // Clear previous errors
   document.querySelectorAll(".error-message").forEach(e => e.textContent = "");
 
   let valid = true;
@@ -38,7 +37,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   if (!valid) return;
 
-  // Disable button while sending
   const submitBtn = form.querySelector("button");
   submitBtn.disabled = true;
   submitBtn.textContent = "Sending...";
