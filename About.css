@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+:root {
+  --bg: #4D0011;
+  --card-bg: #C2858C;
+  --text: #c7fff9;
+  --accent: #731164;
+  --secondary: #4D0011;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'VT323', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* === Main Layout === */
+.about-page {
+  max-width: 800px;
+  background: var(--card-bg);
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(5, 0, 0, 0.3);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  line-height: 1.6;
+}
+
+/* === Section Titles === */
+.about-page h2 {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* === Paragraphs === */
+.about-page p {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* === Lists === */
+.about-page ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.about-page li {
+  margin-bottom: 0.4rem;
+}
+
+/* === Responsive Spacing for Each Section === */
+.about-page section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-page section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+/* === “Future Note” Styling for Emphasis === */
+[data-testid="test-about-future-note"] p {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent);
+}
+
+/* === Responsive === */
+@media (max-width: 700px) {
+  body {
+    padding: 1rem;
+  }
+
+  .about-page {
+    padding: 1.5rem;
+  }
+
+  .about-page h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-page p {
+    font-size: 1rem;
+  }
+}
